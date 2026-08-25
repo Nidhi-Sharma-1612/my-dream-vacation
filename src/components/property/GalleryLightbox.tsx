@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -41,7 +42,7 @@ export default function GalleryLightbox({
     };
   }, [goPrev, goNext, onClose]);
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[100] flex flex-col bg-ink/95"
       role="dialog"
@@ -110,6 +111,7 @@ export default function GalleryLightbox({
           ))}
         </div>
       )}
-    </div>
+    </div>,
+    document.body
   );
 }

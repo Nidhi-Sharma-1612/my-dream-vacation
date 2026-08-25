@@ -49,7 +49,7 @@ export default function Hero() {
 
       <Link
         href="#about"
-        className="group absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1.5 text-cream/70 transition-colors hover:text-cream"
+        className="group absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-1.5 text-cream/70 transition-colors hover:text-cream sm:flex"
       >
         <span className="text-[11px] font-semibold uppercase tracking-[0.2em]">
           Scroll to explore

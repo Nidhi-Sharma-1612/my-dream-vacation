@@ -26,7 +26,7 @@ const columns = [
 export default function Footer() {
   return (
     <footer className="border-t border-black/5 bg-ocean-900 text-cream/80">
-      <div className="container-page grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+      <div className="container-page grid gap-10 py-16 sm:grid-cols-2 sm:gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <Link href="/" className="flex items-center gap-2">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-cream text-ocean-600">
