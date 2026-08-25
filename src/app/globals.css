@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf6ee;
+  --foreground: #1c2b27;
+
+  --color-cream: #faf6ee;
+  --color-sand: #f0e6d2;
+  --color-sand-dark: #e3d3b3;
+  --color-ocean-50: #eef5f4;
+  --color-ocean-100: #d3e6e3;
+  --color-ocean-400: #2e8a86;
+  --color-ocean-500: #1b6b68;
+  --color-ocean-600: #145350;
+  --color-ocean-900: #0c3230;
+  --color-coral-400: #ec9a6c;
+  --color-coral-500: #df7f47;
+  --color-coral-600: #c2652f;
+  --color-ink: #1c2b27;
+  --color-ink-soft: #48584f;
+
+  --nav-height: 4.5rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cream: var(--color-cream);
+  --color-sand: var(--color-sand);
+  --color-sand-dark: var(--color-sand-dark);
+  --color-ocean-50: var(--color-ocean-50);
+  --color-ocean-100: var(--color-ocean-100);
+  --color-ocean-400: var(--color-ocean-400);
+  --color-ocean-500: var(--color-ocean-500);
+  --color-ocean-600: var(--color-ocean-600);
+  --color-ocean-900: var(--color-ocean-900);
+  --color-coral-400: var(--color-coral-400);
+  --color-coral-500: var(--color-coral-500);
+  --color-coral-600: var(--color-coral-600);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-fraunces);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.container-page {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ocean-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+[id] {
+  scroll-margin-top: calc(var(--nav-height) + 1rem);
 }
