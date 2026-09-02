@@ -94,7 +94,7 @@ export default function BookingWidget({
         <button
           type="submit"
           disabled={nights <= 0}
-          className="w-full rounded-full bg-coral-500 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-coral-600 disabled:cursor-not-allowed disabled:opacity-50"
+          className="w-full rounded-full bg-coral-500 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:bg-coral-600 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100"
         >
           {nights > 0 ? "Book Now" : "Select valid dates"}
         </button>

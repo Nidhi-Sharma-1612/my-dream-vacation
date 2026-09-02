@@ -25,8 +25,20 @@ const columns = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-black/5 bg-ocean-900 text-cream/80">
-      <div className="container-page grid gap-10 py-16 sm:grid-cols-2 sm:gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+    <footer className="relative bg-ocean-900 text-cream/80">
+      <svg
+        aria-hidden
+        viewBox="0 0 1440 100"
+        preserveAspectRatio="none"
+        className="pointer-events-none absolute inset-x-0 top-0 z-0 h-8 w-full text-cream sm:h-12"
+      >
+        <path
+          d="M0,60 C240,10 480,90 720,50 C960,15 1200,85 1440,40 L1440,0 L0,0 Z"
+          fill="currentColor"
+        />
+      </svg>
+
+      <div className="container-page relative z-10 grid gap-10 py-16 sm:grid-cols-2 sm:gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <Link href="/" className="flex items-center gap-2">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-cream text-ocean-600">

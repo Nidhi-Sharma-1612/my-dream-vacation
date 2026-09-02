@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <section className="py-20 sm:py-28">
       <div className="container-page grid gap-14 lg:grid-cols-2">
-        <div>
+        <div className="animate-[fade-in-up_0.6s_ease-out_both]">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-coral-600">
             Get in touch
           </span>
@@ -57,7 +57,9 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <ContactForm />
+        <div className="animate-[fade-in-up_0.6s_ease-out_0.1s_both]">
+          <ContactForm />
+        </div>
       </div>
     </section>
   );

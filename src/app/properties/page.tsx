@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { X } from "lucide-react";
 import PropertyCard from "@/components/shared/PropertyCard";
+import Reveal from "@/components/ui/Reveal";
 import { properties } from "@/data/properties";
 
 export const metadata: Metadata = {
@@ -54,7 +55,7 @@ export default async function PropertiesPage({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ocean-900 via-ocean-900/70 to-ocean-900/40" />
         </div>
-        <div className="container-page relative">
+        <div className="container-page relative z-10 animate-[fade-in-up_0.7s_ease-out_both]">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-coral-400">
             The full collection
           </span>
@@ -67,6 +68,18 @@ export default async function PropertiesPage({
             fees, no surprises at checkout.
           </p>
         </div>
+
+        <svg
+          aria-hidden
+          viewBox="0 0 1440 100"
+          preserveAspectRatio="none"
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-12 w-full text-cream sm:h-16"
+        >
+          <path
+            d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,50 L1440,100 L0,100 Z"
+            fill="currentColor"
+          />
+        </svg>
       </section>
 
       <section className="py-16 sm:py-20">
@@ -109,8 +122,10 @@ export default async function PropertiesPage({
 
           {filtered.length > 0 ? (
             <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {filtered.map((property) => (
-                <PropertyCard key={property.slug} property={property} />
+              {filtered.map((property, i) => (
+                <Reveal key={property.slug} delay={(i % 3) * 100}>
+                  <PropertyCard property={property} />
+                </Reveal>
               ))}
             </div>
           ) : (

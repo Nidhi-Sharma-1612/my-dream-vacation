@@ -34,7 +34,10 @@ export default function PropertyCard({ property }: { property: Property }) {
         </div>
 
         <p className="flex items-center gap-1.5 text-sm text-ink-soft">
-          <MapPin size={14} />
+          <span className="relative flex h-3.5 w-3.5 items-center justify-center">
+            <span className="absolute h-full w-full rounded-full bg-ocean-400 opacity-0 group-hover:animate-ping group-hover:opacity-40" />
+            <MapPin size={14} className="relative" />
+          </span>
           {property.location}
         </p>
 

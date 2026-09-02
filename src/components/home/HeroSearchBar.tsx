@@ -83,7 +83,7 @@ export default function HeroSearchBar() {
 
       <button
         type="submit"
-        className="m-1 flex items-center justify-center gap-2 rounded-2xl bg-coral-500 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-coral-600"
+        className="m-1 flex items-center justify-center gap-2 rounded-2xl bg-coral-500 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:scale-[1.03] hover:bg-coral-600 active:scale-95"
       >
         <Search size={16} />
         <span className="sm:hidden">Search stays</span>

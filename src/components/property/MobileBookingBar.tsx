@@ -34,7 +34,7 @@ export default function MobileBookingBar({
       </p>
       <a
         href="#booking-widget"
-        className="rounded-full bg-coral-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-coral-600"
+        className="rounded-full bg-coral-500 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:scale-105 hover:bg-coral-600 active:scale-95"
       >
         Check availability
       </a>
